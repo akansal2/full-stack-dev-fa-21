@@ -1,0 +1,204 @@
+/* Ignore following classes */
+
+* {
+    font-family: "Montserrat", sans-serif;
+    background-color: #eeeeee;
+  }
+  
+  #intro {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .insideborder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .para {
+    font-weight: 300;
+    margin-left: 10px;
+  }
+  
+  h2 {
+    font-size: medium;
+    font-weight: 200;
+  }
+  
+  /* Classes that you might find useful */
+  /* Note* These classes do not cover every possibloe case to build you flags, you will have to continue to add your own*/
+  
+  .flag {
+    height: 300px;
+    width: 500px;
+    border-style: solid;
+    margin-bottom: 5rem;
+  }
+  
+  .smallflag {
+    height: 300px;
+    width: 169px;
+    margin-bottom: 5rem;
+    /* border-bottom:black; */
+  }
+  
+  .horiz {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .vert {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .twohoriz {
+      width: 50%;
+
+  }
+
+  .largehoriz {
+      height: 40%;
+  }
+  
+  .smallhoriz {
+    height: 20%;
+}
+
+  .largegreece {
+      height: 100%;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .greece {
+    height: 100%;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+}
+
+  .smallgreece {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+  .twovert {
+    height: 50%;
+  }
+  
+  .smallthreevert {
+    height: 30%;
+  }
+
+  .threevert {
+    height: 33.3%;
+  }
+
+  .fourvert {
+      height: 25%;
+  }
+  
+  .threehoriz {
+    width: 33.3%;
+  }
+  
+  .skinny {
+    height: 17.5%;
+  }
+  
+  .fat {
+    height: 30%;
+  }
+  
+  .circle {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 85px;
+    top: 50px;
+  }
+  
+  /* Colors/ Feel free to add your own! */
+  
+  .red {
+    background-color: red;
+  }
+  
+  .orange {
+    background-color: orange;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .lightblue {
+    background-color: lightblue;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  
+  .white {
+    background-color: #fff;
+  }
+
+  .gray {
+      background-color: #ebebeb;
+    }
+
+    .romania1 {
+        background-color: #002b7f;
+    }
+
+    .romania2 {
+        background-color: #fcd116;
+    }
+
+    .romania3 {
+        background-color: #ce1126;
+    }
+
+    .thailand1 {
+        background-color: #A51931;
+    }
+    
+    .thailand2 {
+        background-color: #F4F5F8;
+    }
+    
+    .thailand3 {
+        background-color: #2D2A4A;
+    }
+
+    .lux1 {
+        background-color: #F6343F;
+    }
+
+    .lux2 {
+        background-color: #00A2E1;
+    }
+
+    .poland1 {
+        background-color: #DC143C;
+    }
+
+    .greece1 {
+        background-color: #0d5eaf;
+    }
