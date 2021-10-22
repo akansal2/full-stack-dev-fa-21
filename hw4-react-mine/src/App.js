@@ -12,9 +12,7 @@ import Navigbar from './Components/Navigbar'
 function App() {
   return (
     <div className="App">
-      <div className="Navigbar">
-        <h1>Menu</h1>
-      </div>
+      <Navigbar></Navigbar>
       {/* Your Navigation Bar that you imported as component should be here, look at 
       how the Feed Component is imported as a reference point.
       Remember that React Components must start with a capital letter.*/}

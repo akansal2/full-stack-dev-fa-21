@@ -9,7 +9,8 @@ class Block extends React.Component {
   render() {
 
   const mystyle = {
-      display : 'Flex'
+      display : 'Flex',
+      backgroundColor = 'black'
     };
 
   return (
