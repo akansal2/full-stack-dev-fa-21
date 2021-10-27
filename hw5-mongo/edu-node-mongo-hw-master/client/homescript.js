@@ -10,7 +10,7 @@ function todayImage() {
 }
 
 function randomImage() {
-    var start = new Date(2012, 1, 1);
+    var start = new Date(2016, 1, 1);
     var end = new Date();
     var newDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
     var strDate = "" + newDate.getFullYear() + "-" + newDate.getMonth() + "-" + newDate.getDay();
@@ -38,6 +38,7 @@ document.getElementById("heart-button").addEventListener("click", () => {
     if (heart_status == 0) {
         heart.src = "static/heart-filled.png"
         heart_status = 1
+        // db.insert({"date": })
         // TODO: update the database and mark this image as a favorite image.
     } else {
         heart_status = 0
@@ -49,11 +50,11 @@ document.getElementById("heart-button").addEventListener("click", () => {
 document.getElementById("next-button").addEventListener("click", () => {
     document.getElementById("heart-button").src = "static/heart.png";
     heart_status = 0
-    let nextImage = randomImage();
-    document.getElementById("apod-date").innerHTML = nextImage['date'];
-    document.getElementById("apod-title").innerHTML = nextImage['title'];
-    document.getElementById("apod-image").src = nextImage['hdurl'];
-    document.getElementById("apod-p").innerHTML = nextImage['explanation'];
+    today = randomImage();
+    document.getElementById("apod-date").innerHTML = today['date'];
+    document.getElementById("apod-title").innerHTML = today['title'];
+    document.getElementById("apod-image").src = today['hdurl'];
+    document.getElementById("apod-p").innerHTML = today['explanation'];
 
     // TODO: Get the image url, title, description, and date from the database using Fetch.
     // you can use let date = document.getElementById("apod-date"); to change the date.
