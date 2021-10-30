@@ -1,5 +1,6 @@
 console.log("script connected.")
-var favs = require('fav')
+// var favs = require('fav')
+
 
 var heart_status = 0 // 0 is empty and 1 is filled.
 
@@ -41,12 +42,39 @@ document.getElementById("heart-button").addEventListener("click", () => {
     if (heart_status == 0) {
         heart.src = "static/heart-filled.png"
         heart_status = 1
-        router.post
-        favs.append({"date": today['date'], 'title': today['title'], 'explanation': today['explanation'], 'title': today['title']})
+        // favs.append({"date": today['date'], 'title': today['title'], 'explanation': today['explanation'], 'title': today['title']})
+        const newAdd = {
+            "date": today['date'],
+            "title": today['title'],
+            "image": today['hdurl'],
+            "explanation": today['explanation']
+        }
+        fetch("http://localhost:8080/api/add", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newAdd)
+        })
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+        });
         // TODO: update the database and mark this image as a favorite image.
     } else {
         heart_status = 0
         heart.src = "static/heart.png"
+        fetch("http://localhost:8080/api/delete", {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newAdd)
+        })
+        .then(response => response.json())
+        .then(json => {
+            console.log(json);
+        });
         // TODO: update the database and un-mark this image as a favorite image.
     }
 })

@@ -23,6 +23,10 @@
 
     apods = [[json1['hdurl'], json1['date']], [json2['hdurl'], json2['date']]]
 
+    fetch("http://localhost:8080/api/favorite")
+        .then(response => response.json())
+        .then(json => console.log(json));
+
     console.log(apods)
 
     var al = document.getElementById("apod-list");
