@@ -1,4 +1,5 @@
 console.log("script connected.")
+var favs = require('fav')
 
 var heart_status = 0 // 0 is empty and 1 is filled.
 
@@ -28,6 +29,8 @@ function httpGet(theUrl) {
     return xmlHttp.responseText;
 }
 
+var favs = []
+
 document.getElementById("apod-date").innerHTML = today['date'];
 document.getElementById("apod-title").innerHTML = today['title'];
 document.getElementById("apod-image").src = today['hdurl'];
@@ -38,7 +41,8 @@ document.getElementById("heart-button").addEventListener("click", () => {
     if (heart_status == 0) {
         heart.src = "static/heart-filled.png"
         heart_status = 1
-        // db.insert({"date": })
+        router.post
+        favs.append({"date": today['date'], 'title': today['title'], 'explanation': today['explanation'], 'title': today['title']})
         // TODO: update the database and mark this image as a favorite image.
     } else {
         heart_status = 0

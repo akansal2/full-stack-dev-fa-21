@@ -20,26 +20,6 @@
 
     // TODO: Fetch a list of APODs from the database.
     // Here the apods are filled with dummy data.
-    const API_KEY = "WRETL0tUJMgJoBQ5Acf12npLmIqjxEyHAuazueRF";
-
-    function randomImage() {
-        var start = new Date(2012, 1, 1);
-        var end = new Date();
-        var newDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-        var strDate = "" + newDate.getFullYear() + "-" + newDate.getMonth() + "-" + newDate.getDay();
-        var newDate = "https://api.nasa.gov/planetary/apod?date=" + strDate + "&api_key=" + API_KEY;
-        return JSON.parse(httpGet(newDate));
-        }
-    
-    var json1 = randomImage();
-    var json2 = randomImage();
-
-    function httpGet(theUrl) {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-        xmlHttp.send( null );
-        return xmlHttp.responseText;
-    }
 
     apods = [[json1['hdurl'], json1['date']], [json2['hdurl'], json2['date']]]
 
